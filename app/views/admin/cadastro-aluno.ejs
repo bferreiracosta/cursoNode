@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Systemax-Principal-Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text" media="screen" href="style/main.css" />
+    
+</head>
+<body>
+		<header>
+				<a href="/cadastro-aluno">Cadastro de aluno</a>
+				<a href="/lista-aluno">Listagem de aluno</a>
+		</header>
+<form>
+	<table border="1">			
+			<tr><td><label>Matricula: </label></td>
+			<td><input type="text" name="matricula" readonly="readonly" placeholder="matricula"></td></tr>
+			<tr><td><label>Nome: </label></td>
+			<td><input type="text" name="nome" placeholder="Digite seu nome"></td></tr>
+			<tr><td><label>Endereço: </label></td>
+			<td><input type="text" name="Endereco" placeholder="Digite seu Endereco"></td></tr>
+			<tr><td><label>Sexo: </label></td>
+			<td><input type="radio" name="Sexo" value="Masculino">Masculino
+			<input type="radio" name="Sexo" value="Feminino">Feminino</td></tr>
+			<tr><td><label>Curso: </label></td>
+			<td><select>
+				<option>Sistema de informação</option>
+				<option>Direito</option>
+				<option>Ciencias da Computação</option>
+			</select></td></tr>
+			<tr><td style="border:none"><input type="button" name="Cadastrar" onclick="Nova()" value="Cadastrar"></td>
+			<td style="border:none" ><a href="/">Sair</a></td></tr>
+	</table>
+</form>
+<div>
+		<label>Nome: </label>
+		<input type="text" name="nome" placeholder="Digite seu nome">
+		<button type="submit"><a href="/lista-aluno">Filtrar</a></button>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+
+<script>
+        function Nova()
+    {
+    location.href="/lista-aluno"
+    }
+    </script>
+</html>

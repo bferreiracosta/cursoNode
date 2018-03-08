@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>Systemax-Principal-Cadastro</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" type="text" media="screen" href="style/main.css" />
+			
+		</head>
+	<body>
+
+		<header>
+				<a href="/cadastro-aluno">Cadastro de aluno</a>
+				<a href="/lista-aluno">Listagem de aluno</a>
+		</header>
+		<h1>Adicionar notícia</h1>
+		<br />
+
+		<form action="/noticias/salvar" method="post">
+			<label>Título</label>
+			<input type="text" id="titulo" name="titulo" placeholder="Título da Notícia" />
+			<br />
+			<label>Notícia</label>
+			<textarea id="noticia" name="noticia" rows="5" cols="30"></textarea>
+			<br />
+			<input type="submit" value="Enviar" />
+		</form>
+	</body>
+</html>

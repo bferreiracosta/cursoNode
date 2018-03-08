@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Listagem de Aluno Systemax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text" media="screen" href="style/main.css" />
+    
+</head>
+<body>
+	<header>
+			<a href="/cadastro-aluno">Cadastro de aluno</a>
+			<a href="/lista-aluno">Listagem de aluno</a>
+	</header>
+	<div>
+		<label>Aluno: </label>
+	</div>
+	<div>
+		<table border="1">
+			<thead>
+				<th style="width: 10%;">Matricula</th>
+				<th style="width: 10%;">Nome</th>
+				<th style="width: 10%;">Curso</th>
+				<th style="width: 10%;">Editar</th>
+				<th style="width: 10%;">Apagar</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 10%;">1001</td>
+					<td style="width: 10%;">Fulano</td>
+					<td style="width: 10%;">Sistema de informação</td>
+					<td style="text-align:center; width: 10%;"><a href="/cadastro-aluno"><img style="width: 10%;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1xRGBI_mRDpIZGCoGOT4AUHRoOvChcU2K2qNjtB1LWU7H_yg"></a></td>
+					<td style="text-align:center; width: 10%;"><a onclick="confirma();"><img style="width: 10%;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYlgEFkBq8W0eZv3z8w7mHlfy1IfBFzNKENJQlezIcn37kjMivw"></a></td>
+				</tr>
+				<tr>
+					<td style="width: 10%;">1002</td>
+					<td style="width: 10%;">Ciclano</td>
+					<td style="width: 10%;">Direito</td>
+					<td style="text-align:center; width: 10%;"> <a href="/cadastro-aluno"><img  style="width: 10%;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL1xRGBI_mRDpIZGCoGOT4AUHRoOvChcU2K2qNjtB1LWU7H_yg"></a></td>
+					<td style="text-align:center; width: 10%;"><a onclick="confirma();"><img style="width: 10%;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIYlgEFkBq8W0eZv3z8w7mHlfy1IfBFzNKENJQlezIcn37kjMivw"></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	</div>
+	<input type="button" onclick="Nova()" value="Cadastrar">
+	<a href="/">Sair</a>
+
+	
+	<script src="js/main.js"></script>
+
+</body>
+<script>
+        function Nova()
+    {
+    location.href="/cadastro-aluno"
+	}
+	function confirma(){
+				
+			var x;
+			var r=confirm("Tem certeza ?");
+			if (r==true)
+			{
+				x=location.href="/cadastro-aluno"
+			}
+			else
+			{
+				x=location.href="/lista-aluno"
+			}
+			document.getElementById("demo").innerHTML=x;
+			}
+	</script>
+</html>
